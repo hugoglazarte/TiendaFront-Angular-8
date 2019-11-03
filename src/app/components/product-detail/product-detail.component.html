@@ -1,0 +1,11 @@
+<h1>{{ product.name }}</h1>
+
+<p>product-detail works!</p>
+<div class="product_image"><img src="http://via.placeholder.com/300" alt=""></div>
+
+<h4>Talles Disponibles:</h4>
+
+<ul *ngFor="let talles of productSizes;">
+    <li> Tamaño: {{ talles.size.name }}</li>
+    <li> Cantidad: {{ talles.stock }}</li>
+</ul>
