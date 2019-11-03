@@ -30,8 +30,8 @@
               "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.css",
               "src/assets/plugins/OwlCarousel2-2.2.1/owl.theme.default.css",
               "src/assets/plugins/OwlCarousel2-2.2.1/animate.css",
-              "src/assets/styles/main_styles.css",
-              "src/assets/styles/responsive.css"
+              "src/assets/styles/theme/main_styles.css",
+              "src/assets/styles/theme/responsive.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",

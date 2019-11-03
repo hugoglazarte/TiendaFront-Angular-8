@@ -27,5 +27,5 @@ export class ProductSize {
 export class Size {
     name: string;
     description: string;
-    productsSizes: ProductSize[]; 
+    // productsSizes: ProductSize[]; 
 }

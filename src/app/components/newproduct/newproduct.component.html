@@ -1,0 +1,83 @@
+<p>NEW PRODUCS</p>
+
+<div class="checkout">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-3">
+            </div>
+            <!-- Product -->
+            <div class="col-lg-6">
+                <div class="billing">
+
+                    <div class="checkout_title">Product</div>
+
+                    <div class="checkout_form_container">
+                        <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+
+                            <!-- Nombre Producto -->
+                            <div class="form-group">
+                                <input formControlName="name" type="text" class="form-control checkout_input"
+                                    id="product_name" placeholder="Ingresar nombre"
+                                    [ngClass]="{'is-invalid': form.get('name').dirty && (form.get('name').hasError('required') || form.get('name').hasError('minlength'))}">
+                                <!-- <div class="invalid-feedback" *ngIf="controlHasError('name', 'required')">Este campo es obligatorio</div> -->
+                            </div>
+
+                            <!-- Description -->
+                            <div class="form-group">
+                                <input formControlName="description" type="text" class="form-control checkout_input"
+                                    id="checkout_description" placeholder="Descripcion"
+                                    [ngClass]="{'is-invalid': form.get('name').dirty && (form.get('name').hasError('required') || form.get('name').hasError('minlength'))}">
+                                <!-- <div class="invalid-feedback" *ngIf="controlHasError('name', 'required')">Este campo es obligatorio</div> -->
+                            </div>
+
+
+                            <!-- Category -->
+                            <div>
+                                <select formControlName="catId" placeholder="" name="checkout_category" id="checkout_category"
+                                    class="form-control dropdown_item_select checkout_input" require="required">
+                                    <option value="" disabled >Categorie</option> 
+                                    <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
+                                
+                                </select>
+                            </div>
+                            <br>
+                            <!-- Precio -->
+                            <div class="form-group">
+                                <!-- <label for="name">Precio</label> -->
+                                <input formControlName="price" type="text" id="checkout_price"
+                                    class="form-control checkout_input " placeholder="Precio"
+                                    [ngClass]="{'is-invalid': form.get('name').dirty && (form.get('name').hasError('required') || form.get('name').hasError('minlength'))}">
+                                <!-- <div class="invalid-feedback" *ngIf="controlHasError('name', 'required')">Este campo es obligatorio</div> -->
+                            </div>
+                            
+                            <!-- Category -->
+                            <div>
+                                <select formControlName="size" name="checkout_category"
+                                    data-placeholder="Selecciona el Talle" id="checkout_category"
+                                    class="dropdown_item_select checkout_input select2 form-control" require="required">
+                                    <option value="" disabled >Size</option> 
+                                    <option *ngFor="let size of sizes" [value]="size.id">{{ size.name }}</option>
+                                </select>
+                            </div>
+
+                            <div class="checkout_button trans_200">
+                                <a href="checkout.html" data-toggle="modal" data-target="#exampleModal">Save</a>
+
+                                <!-- <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Submit</button> -->
+                            </div>
+
+
+                            <!-- <option *ngFor="let home of homes" [value]="home.id">{{ home.name }}</option> -->
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
+</div>
+
